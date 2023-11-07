@@ -94,7 +94,7 @@ const ProductModal = ({
               <Button variant="secondary" onClick={onHide}>
                 Cancelar
               </Button>
-              <Button variant="primary" onClick={handleDelete()}>
+              <Button variant="primary" onClick={() => handleDelete()}>
                 Eliminar
               </Button>
             </Modal.Footer>
