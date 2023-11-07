@@ -1,6 +1,6 @@
 import { Product } from "../types/Product";
 
-const BASE_URL = "https://fakestoreapi.com/";
+const BASE_URL = "https://fakestoreapi.com";
 
 export const ProductService = {
   //Para hacer consultas HTTP

@@ -1,6 +1,10 @@
+import ProductTable from "../components/ProductTable/ProductTable"
+
 function Administracion() {
   return (
-    <div>Administracion</div>
+    <>
+      <ProductTable />
+    </>
   )
 }
 export default Administracion
