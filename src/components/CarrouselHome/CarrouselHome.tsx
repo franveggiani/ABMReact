@@ -7,7 +7,7 @@ function CarrouselHome() {
         <img 
             className='d-block w-100'
             style={{maxHeight: "300px", objectFit: "cover"}}
-            src='src/assets/images/Screenshot 2023-04-14 091538.png' alt='    '
+            src='/images/beatles.webp' alt='    '
         />
         <Carousel.Caption>
           <h3>First slide label</h3>
@@ -18,7 +18,7 @@ function CarrouselHome() {
       <img 
             className='d-block w-100'
             style={{maxHeight: "300px", objectFit: "cover"}}
-            src='src/assets/images/Screenshot 2023-04-14 091613.png' alt=''
+            src='/images/beatles2.jpg' alt=''
         />
         <Carousel.Caption>
           <h3>Second slide label</h3>
@@ -29,7 +29,7 @@ function CarrouselHome() {
       <img 
             className='d-block w-100'
             style={{maxHeight: "300px", objectFit: "cover"}}
-            src='src/assets/images/Screenshot 2023-04-14 091645.png' alt='    '
+            src='/images/beatles3.jpg' alt='    '
         />
         <Carousel.Caption>
           <h3>Third slide label</h3>
