@@ -35,6 +35,7 @@ const ProductModal = ({
   prod,
   refreshData,
 }: ProductModalProps) => {
+
   //CREATE - ACTUALIZAR
   const handleSaveUpdate = async (prod: Product) => {
     try {
@@ -80,7 +81,7 @@ const ProductModal = ({
     <>
       {modalType === ModalType.DELETE ? (
         <>
-          <Modal>
+          <Modal show={show} onHide={onHide} centered backdrop="static">
             <Modal.Header>
               <Modal.Title>{title}</Modal.Title>
             </Modal.Header>
