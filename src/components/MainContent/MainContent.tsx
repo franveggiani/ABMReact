@@ -8,7 +8,7 @@ export const MainContent = () => {
       <Row>
         <Col>
           <Card style={{ width: "22rem" }}>
-            <Card.Img variant="top" src="/card1.jpg" style={{maxWidth: "100%", height: "18rem"}} />
+            <Card.Img variant="top" src="/images/card1.jpg" style={{maxWidth: "100%", height: "18rem"}} />
             <Card.Body>
               <Card.Title>Card Title</Card.Title>
               <Card.Text>
@@ -21,7 +21,7 @@ export const MainContent = () => {
 
         <Col>
           <Card style={{ width: "22rem" }}>
-            <Card.Img variant="top" src="/card1.jpg" style={{maxWidth: "100%", height: "18rem"}} />
+            <Card.Img variant="top" src="/images/card1.jpg" style={{maxWidth: "100%", height: "18rem"}} />
             <Card.Body>
               <Card.Title>Card Title</Card.Title>
               <Card.Text>
@@ -34,7 +34,7 @@ export const MainContent = () => {
 
         <Col>
           <Card style={{ width: "22rem" }}>
-          <Card.Img variant="top" src="/card1.jpg" style={{maxWidth: "100%", height: "18rem"}} />
+          <Card.Img variant="top" src="/images/card1.jpg" style={{maxWidth: "100%", height: "18rem"}} />
             <Card.Body>
               <Card.Title>Card Title</Card.Title>
               <Card.Text>
