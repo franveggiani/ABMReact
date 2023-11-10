@@ -47,7 +47,6 @@ const ProductTable = () => {
     setModalType(modal);
     setProduct(prod);
     setShowModal(true);
-    console.log("esto anda");
   };
 
   //Cada vez que se renderice el componente se va a ejecutar lo que esté dentro

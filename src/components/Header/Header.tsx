@@ -24,6 +24,7 @@ function Header() {
             <Nav.Link onClick={() => navigate('/')}>Home</Nav.Link>
             <Nav.Link onClick={() => navigate('/componentes')}>Componentes</Nav.Link>
             <Nav.Link onClick={() => navigate('/administracion')}>Administración</Nav.Link>
+            <Nav.Link onClick={() => navigate('/abmproductos')}>Administrar productos</Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control
