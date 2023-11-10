@@ -11,21 +11,24 @@ const ProductosTable = () => {
   const initDTOProductoRequest = (): DTOProductoRequest => {
     return {
       id: 0,
-      tipoProducto: null,
+      tipoProducto: "",
       denominacion: "",
       descripcion: "",
       precio: 0,
       costo: 0,
-      tiempoEstimadoCocina: 0,
-      marca: "",
-      lote: 0,
+      tiempoEstimadoCocina: null,
+      marca: null,
+      lote: null,
       detalleProductoCocinaList: [{
         ingrediente: {
           id: 1
         },
-        cantidad: 0
+        cantidad: 5
       }],
-      rubroProducto: null,
+      rubroProducto: {
+        id: 1
+      },
+      urlImagen: "https://www.tecnagent.com/wp-content/uploads/2017/11/imagen-no-disponible.png"
     };
   };
 

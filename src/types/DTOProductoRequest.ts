@@ -1,13 +1,13 @@
 export interface DTOProductoRequest {
     id: number;
-    tipoProducto: string | null;
+    tipoProducto: string;
     denominacion: string;
     descripcion: string;
     precio: number;
     costo: number;
-    tiempoEstimadoCocina: number;
-    marca: string;
-    lote: number;
+    tiempoEstimadoCocina: number | null;
+    marca: string | null;
+    lote: number | null;
     detalleProductoCocinaList: [
         {
             ingrediente: {
@@ -16,7 +16,10 @@ export interface DTOProductoRequest {
             cantidad: number;
         }
     ] | null;
+    
     rubroProducto: {
         id: number;
     } | null;
+
+    urlImagen: string;
 }
