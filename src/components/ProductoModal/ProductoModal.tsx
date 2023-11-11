@@ -32,6 +32,7 @@ const validationSchema = () => {
     descripcion: Yup.string().required("Debe poner una descripcion"),
     precio: Yup.number().min(0).required("El precio es obligatorio"),
     costo: Yup.number().min(0).required("El costo es obligatorio"),
+    tipoProducto: Yup.string().required("Elije un tipo de producto")
   });
 };
 
@@ -136,16 +137,16 @@ const ProductoModal = ({
 
                 <FormGroup controlId="formTipoProducto">
                   <FormLabel>TipoProducto</FormLabel>
-                  <Form.Control
-                    name="tipoProducto"
-                    type="text"
-                    value={formik.values.tipoProducto || ""}
+                  <select 
+                    name="tipoProducto" 
+                    id="tipoProducto" 
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    isInvalid={Boolean(
-                      formik.errors.tipoProducto && formik.touched.tipoProducto
-                    )}
-                  />
+                    value={formik.values.tipoProducto}
+                  >
+                      <option value="Cocina">Cocina</option>
+                      <option value="Insumo">Insumo</option>
+                  </select>
                   <Form.Control.Feedback type="invalid">
                     {formik.errors.denominacion}
                   </Form.Control.Feedback>
@@ -223,6 +224,64 @@ const ProductoModal = ({
                     </FormGroup>
                   </Col>
                 </Row>
+
+                {formik.values.tipoProducto === "Insumo" ? (
+                  <>
+                    <FormGroup controlId="marca">
+                      <FormLabel>Marca</FormLabel>
+                      <Form.Control
+                        name="marca"
+                        type="string"
+                        value={formik.values.marca || ""}
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        isInvalid={Boolean(
+                          formik.errors.marca && formik.touched.marca
+                        )}
+                      />
+                      <Form.Control.Feedback type="invalid">
+                        {formik.errors.marca}
+                      </Form.Control.Feedback>
+                    </FormGroup>
+
+                    <FormGroup controlId="lote">
+                      <FormLabel>Lote</FormLabel>
+                      <Form.Control
+                        name="lote"
+                        type="string"
+                        value={formik.values.lote || ""}
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        isInvalid={Boolean(
+                          formik.errors.lote && formik.touched.lote
+                        )}
+                      />
+                      <Form.Control.Feedback type="invalid">
+                        {formik.errors.lote}
+                      </Form.Control.Feedback>
+                    </FormGroup>
+                  </>
+                ) : (
+                  <>
+                    <FormGroup controlId="tiempoEstimadoCocina">
+                      <FormLabel>Tiempo de cocina estimado</FormLabel>
+                      <Form.Control
+                        name="tiempoEstimadoCocina"
+                        type="number"
+                        value={formik.values.tiempoEstimadoCocina || ""}
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        isInvalid={Boolean(
+                          formik.errors.tiempoEstimadoCocina && formik.touched.tiempoEstimadoCocina
+                        )}
+                      />
+                      <Form.Control.Feedback type="invalid">
+                        {formik.errors.tiempoEstimadoCocina}
+                      </Form.Control.Feedback>
+                    </FormGroup>
+                    <p>Implementar selección de ingredientes</p>
+                  </>
+                )}
 
                 <Modal.Footer>
                   <Button variant="secondary" onClick={onHide}>
